@@ -69,4 +69,4 @@ Use `./build.sh` to build CiCo and `./run.sh` to run it if using the command lin
 2. Enter abcabcab into the field and click Update.
 
 ## Expected results
-* Should display an error message and then the main screen.
+* Only numerical characters show in the field.
