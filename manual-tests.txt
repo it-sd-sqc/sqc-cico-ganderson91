@@ -70,3 +70,22 @@ Use `./build.sh` to build CiCo and `./run.sh` to run it if using the command lin
 
 ## Expected results
 * Only numerical characters show in the field.
+
+
+# Module 5
+
+## Test steps
+1. Build and run CiCo.
+2. Enter "00000000" into the text field.
+
+## Expected results
+* There should be a "Done" button that, when clicked, will close the status panel and show the main panel.
+
+## Test steps
+1. Build and run CiCo.
+2. Click on the default 'close window' button (red button on the far top left corner of the window for macOS and the "X"
+   button on the far top right of the window for Windows).
+
+## Expected results
+* The window should close, and the application's running operations should stop; the application should not appear in
+  the "Force Quit..." window on macOS or the Task Manager on Windows.
