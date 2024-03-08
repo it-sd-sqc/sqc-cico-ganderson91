@@ -218,6 +218,8 @@ public class Main {
   private static void updateStateLabels(String name, boolean isCheckedInNow) {
     labelUser.setText(name);
     labelState.setText(isCheckedInNow ? "Checked IN" : "Checked OUT");
+    // change color to red
+    labelState.setForeground(isCheckedInNow ? Color.green : Color.red);
   }
 
   // Entry point //////////////////////////////////////////////////////////////
@@ -246,13 +248,13 @@ public class Main {
     panelMain.setMinimumSize(new Dimension(320, 240));
     panelMain.setPreferredSize(new Dimension(640, 480));
     panelMain.setMaximumSize(new Dimension(640, 480));
-    panelMain.setBackground(Color.black);
+    panelMain.setBackground(Color.gray);
 
     panelMain.add(Box.createVerticalGlue());
     JLabel labelDirective = new JLabel("Scan card", JLabel.LEADING);
     labelDirective.setFont(fontMain);
     labelDirective.setAlignmentX(JComponent.CENTER_ALIGNMENT);
-    labelDirective.setForeground(Color.cyan);
+    labelDirective.setForeground(Color.black);
     panelMain.add(labelDirective);
 
     fieldNumber = new JTextField();
@@ -261,14 +263,14 @@ public class Main {
     fieldNumber.setPreferredSize(new Dimension(200, 32));
     fieldNumber.setMaximumSize(new Dimension(200, 32));
     fieldNumber.setAlignmentX(JComponent.CENTER_ALIGNMENT);
-    fieldNumber.setBackground(Color.green);
-    fieldNumber.setForeground(Color.magenta);
+    fieldNumber.setBackground(Color.white);
+    fieldNumber.setForeground(Color.black);
     panelMain.add(fieldNumber);
 
     JButton updateButton = new JButton("Update");
     updateButton.setAlignmentX(JComponent.CENTER_ALIGNMENT);
     updateButton.addActionListener(new Update());
-    updateButton.setForeground(Color.green);
+    updateButton.setForeground(Color.black);
     panelMain.add(updateButton);
 
     panelMain.add(Box.createVerticalGlue());
@@ -279,13 +281,13 @@ public class Main {
     panelStatus.setMinimumSize(new Dimension(320, 240));
     panelStatus.setPreferredSize(new Dimension(640, 480));
     panelStatus.setMaximumSize(new Dimension(640, 480));
-    panelStatus.setBackground(Color.blue);
+    panelStatus.setBackground(Color.gray);
 
     panelStatus.add(Box.createVerticalGlue());
     labelUser = new JLabel("Registrant", JLabel.LEADING);
     labelUser.setFont(fontMain);
     labelUser.setAlignmentX(JComponent.CENTER_ALIGNMENT);
-    labelUser.setForeground(Color.yellow);
+    labelUser.setForeground(Color.white);
     panelStatus.add(labelUser);
 
     labelState = new JLabel("updated", JLabel.LEADING);
@@ -297,7 +299,7 @@ public class Main {
     JButton doneButton = new JButton("Done");
     doneButton.setAlignmentX(JComponent.CENTER_ALIGNMENT);
     doneButton.addActionListener(new Handler());
-    doneButton.setForeground(Color.red);
+    doneButton.setForeground(Color.black);
     panelStatus.add(doneButton);
 
     panelStatus.add(Box.createVerticalGlue());
